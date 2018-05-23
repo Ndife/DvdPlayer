@@ -11,16 +11,13 @@ package dvd;
  */
 public class Power extends dvdPlayer{
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        
-    }
-
     public Power(Play play, Pause pause, Stop stop) {
         super(play, pause, stop);
     }
+
+    public Power(Open open, Close close, Play play, Pause pause) {
+        super(open, close, play, pause);
+    }
     
-    public power()
+    
 }

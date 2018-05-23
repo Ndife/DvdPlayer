@@ -13,15 +13,27 @@ abstract class dvdPlayer implements Dvd{
     Play play;
     Pause pause;
     Stop stop;
-    
+    Open open;
+    Close close;
+     dvdPlayer(Open open,Close close,Play play, Pause pause){
+         this.open = open;
+         this.close = close;
+         this.play = play;
+         this.pause = pause;
+    }
+     
     dvdPlayer(Play play, Pause pause, Stop stop){
         this.play = play;
         this.pause = pause;
         this.stop = stop;
     }
+    
+     
    @Override
-   public void Loader(){
-    System.out.println("disk loader");
+   public  void Loader(){
+       this.open.Opening();
+       this.close.closing();
+    System.out.println("reading...");
 }
    @Override
 public void Control(){
